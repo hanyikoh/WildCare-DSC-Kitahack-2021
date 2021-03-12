@@ -19,7 +19,7 @@ class _MenuState extends State<Menu> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Image(image: AssetImage("assets/list.png")),
+                  Image(image: AssetImage("assets/images/list.png")),
                   Text('List'),
                 ],
               ),
@@ -32,7 +32,7 @@ class _MenuState extends State<Menu> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Image(image: AssetImage("assets/quiz.png")),
+                  Image(image: AssetImage("assets/images/quiz.png")),
                   Text('Quiz'),
                 ],
               ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import "menu.dart";
+import 'module/menu.dart';
+import 'module/drawer.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Wildlife care',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        brightness: Brightness.light,
+        primaryColor: Colors.white,
+        accentColor: Colors.cyan[600],
       ),
       home: MyHomePage(title: 'Wildlife, we care'),
     );
@@ -37,6 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Menu(),
       ),
+      drawer: DrawerNav(),
     );
   }
 }
