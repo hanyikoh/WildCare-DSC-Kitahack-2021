@@ -174,7 +174,7 @@ class _qyuzpageState extends State<quizpage> {
           body: Column(
             children: <Widget>[
               Expanded(
-                flex: 2,
+                flex: 3,
                 child: Container(
                   padding: EdgeInsets.all(15.0),
                   alignment: Alignment.bottomLeft,
@@ -202,7 +202,7 @@ class _qyuzpageState extends State<quizpage> {
                 ),
               ),
               Expanded(
-                flex: 6,
+                flex: 1,
                 child: Container(
                   alignment: Alignment.topCenter,
                   child: Center(

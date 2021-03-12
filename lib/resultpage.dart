@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:quiz_app/drawer.dart';
 import 'home.dart';
 
 class resultpage extends StatefulWidget {
@@ -110,6 +111,8 @@ class _resultpageState extends State<resultpage> {
               ),
             )
           ],
-        ));
+        ),
+      drawer: DrawerNav(),
+    );
   }
 }

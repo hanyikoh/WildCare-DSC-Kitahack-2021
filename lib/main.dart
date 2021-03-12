@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'menu.dart';
 import 'drawer.dart';
 import 'quizpage.dart';
+import 'leaderboard.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/list': (context) => homepage(),
         '/quiz': (context) => getjson(),
+        '/leaderboard': (context) => Leaderboard(),
       },
     );
   }

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/drawer.dart';
 import 'package:quiz_app/home.dart';
 
 class Leaderboard extends StatefulWidget {
+  static const String routeName = '/leaderboard';
+
   @override
   _LeaderboardState createState() => _LeaderboardState();
 }
@@ -142,6 +145,7 @@ class _LeaderboardState extends State<Leaderboard> {
         ),
       ],
     ),
+      drawer: DrawerNav(),
     );
   }
 }

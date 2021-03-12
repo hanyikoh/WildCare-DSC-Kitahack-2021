@@ -21,6 +21,15 @@ class DrawerNav extends StatelessWidget {
             print(context),
             Navigator.pushNamed(context, Routes.quiz)
           },
+        ),
+        _createDrawerItem(
+          icon: Icons.home,
+          text: 'Leader Board',
+          onTap: () => {
+            Navigator.pop(context),
+            print(context),
+            Navigator.pushNamed(context, Routes.leaderboard)
+          },
         )
       ]),
     );
