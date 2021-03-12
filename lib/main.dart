@@ -1,6 +1,6 @@
 import 'HomeLoading.dart';
 import 'package:flutter/material.dart';
-
+import 'leaderboard.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home:HomeLoading(),
+      home:Leaderboard(),
     );
   }
 }
