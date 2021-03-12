@@ -1,4 +1,4 @@
-# engandered_animal_learning_app
+# endangered_animal_learning_app
 
 A new Flutter application.
 
