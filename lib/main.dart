@@ -1,20 +1,54 @@
-import 'package:quiz_app/home.dart';
+import 'package:quiz_app/HomeLoading.dart';
 
-import 'HomeLoading.dart';
+import 'home.dart';
+
 import 'package:flutter/material.dart';
-import 'leaderboard.dart';
+import 'menu.dart';
+import 'drawer.dart';
+import 'quizpage.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "QuizApp",
+      title: 'WildCare',
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        brightness: Brightness.light,
+        primaryColor: Colors.white,
+        accentColor: Colors.cyan[600],
       ),
-      home:homepage(),
+      initialRoute: '/',
+      home: MyHomePage(title: 'WildCare'),
+      routes: {
+        '/list': (context) => homepage(),
+        '/quiz': (context) => getjson(),
+      },
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: HomeLoading(),
+      ),
+      drawer: DrawerNav(),
     );
   }
 }

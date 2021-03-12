@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/drawer.dart';
 import 'dart:async';
 import 'home.dart';
+import 'menu.dart';
 
 class HomeLoading extends StatefulWidget {
   @override
@@ -14,7 +16,7 @@ class _HomeLoadingState extends State<HomeLoading> {
     super.initState();
     Timer(Duration(seconds: 3), (){
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context)=> homepage()
+          builder: (context)=> Menu()
       ));
     });
   }
@@ -31,7 +33,8 @@ class _HomeLoadingState extends State<HomeLoading> {
                     color: Colors.white
                 )
             )
-        )
+        ),
+        drawer: DrawerNav(),
     );
   }
 }

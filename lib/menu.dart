@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'quizpage.dart';
+import 'home.dart';
 
 class Menu extends StatefulWidget {
   @override
@@ -6,6 +8,7 @@ class Menu extends StatefulWidget {
 }
 
 class _MenuState extends State<Menu> {
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,12 +19,19 @@ class _MenuState extends State<Menu> {
             width: 200,
             height: 200,
             child: Card(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Image(image: AssetImage("assets/images/list.png")),
-                  Text('List'),
-                ],
+              child: InkWell(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Image(image: AssetImage("images/list.png")),
+                    Text('List'),
+                  ],
+                ),
+                onTap: ()=>{
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder:(context) => homepage(),
+                ))
+                },
               ),
             ),
           ),
@@ -32,7 +42,7 @@ class _MenuState extends State<Menu> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Image(image: AssetImage("assets/images/quiz.png")),
+                  Image(image: AssetImage("images/quiz.png")),
                   Text('Quiz'),
                 ],
               ),

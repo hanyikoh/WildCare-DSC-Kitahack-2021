@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'Routes.dart';
+
 
 class DrawerNav extends StatelessWidget {
   @override
@@ -9,10 +11,16 @@ class DrawerNav extends StatelessWidget {
         _createDrawerItem(
           icon: Icons.list,
           text: 'List',
+          onTap: () => Navigator.pushNamed(context, Routes.list),
         ),
         _createDrawerItem(
-          icon: Icons.fact_check,
+          icon: Icons.home,
           text: 'Quiz',
+          onTap: () => {
+            Navigator.pop(context),
+            print(context),
+            Navigator.pushNamed(context, Routes.quiz)
+          },
         )
       ]),
     );
@@ -34,7 +42,7 @@ class DrawerNav extends StatelessWidget {
             bottom: 12.0,
             left: 16.0,
             child: Text(
-              "Wildlife",
+              "WildCare - WeCare",
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 20.0,

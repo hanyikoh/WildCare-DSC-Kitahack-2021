@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'resultpage.dart';
 class getjson extends StatelessWidget {
+  static const String routeName = '/quiz';
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(

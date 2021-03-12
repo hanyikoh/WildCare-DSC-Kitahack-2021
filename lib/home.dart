@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:quiz_app/drawer.dart';
 import 'quizpage.dart';
 
 class homepage extends StatefulWidget {
+  static const String routeName = '/';
+
   @override
   _homepageState createState() => _homepageState();
 }
@@ -68,7 +71,8 @@ class _homepageState extends State<homepage> {
                     ),
                   )
                 ],
-              )),
+              ),
+          ),
         ),
       ),
     );
@@ -92,6 +96,7 @@ class _homepageState extends State<homepage> {
             customcard("Linux", images[4]),
           ],
         ),
+      drawer: DrawerNav(),
     );
   }
 }
