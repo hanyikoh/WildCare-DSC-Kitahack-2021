@@ -39,7 +39,7 @@ class quizpage extends StatefulWidget {
 }
 
 class _qyuzpageState extends State<quizpage> {
-  var mydata;
+  final List mydata;
   _qyuzpageState(this.mydata);
 
   Color colortoshow = Colors.indigoAccent;
@@ -101,7 +101,7 @@ class _qyuzpageState extends State<quizpage> {
     super.initState();
   }
   void checkAnswer(String k){
-    if(mydata[2]["1"] == mydata[1]["2"][k]){
+    if(mydata[2][i.toString()] == mydata[1][i.toString()][k]){
       marks = marks + 5;
       colortoshow = right;
     }else {
@@ -111,6 +111,7 @@ class _qyuzpageState extends State<quizpage> {
       btnColor[k] = colortoshow;
       cancelTimer = true;
     });
+    Timer(Duration(seconds: 2), nextquestion);
   }
 
   Widget choicebutton(String k){
