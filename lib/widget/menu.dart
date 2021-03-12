@@ -14,8 +14,8 @@ class _MenuState extends State<Menu> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           SizedBox(
-            width: 200,
-            height: 200,
+            width: 160,
+            height: 160,
             child: Card(
               child: InkWell(
                 onTap: () => {
@@ -31,23 +31,47 @@ class _MenuState extends State<Menu> {
               ),
             ),
           ),
-          SizedBox(
-            width: 200,
-            height: 200,
-            child: Card(
-              child: InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, Routes.quiz);
-                },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Image(image: AssetImage("assets/images/quiz.png")),
-                    Text('Quiz'),
-                  ],
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              SizedBox(
+                width: 160,
+                height: 160,
+                child: Card(
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.quiz);
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Image(image: AssetImage("assets/images/quiz.png")),
+                        Text('Quiz'),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-            ),
+              SizedBox(
+                width: 160,
+                height: 160,
+                child: Card(
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Routes.leaderboard);
+                    },
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Image(
+                            image: AssetImage("assets/images/leaderboard.png")),
+                        Text('Leaderboard'),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),
