@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/home.dart';
 
 class Leaderboard extends StatefulWidget {
   @override
@@ -17,19 +18,76 @@ class _LeaderboardState extends State<Leaderboard> {
         body: Stack(
       children: <Widget>[
         Positioned(
+          top: screenHeight*0.23,
+          left:0,
+          right:0,
+          bottom: 0,
+          child: Container(
+            decoration: BoxDecoration(image:DecorationImage(
+              image:NetworkImage("https://padelcalatayud.com/Blog/wp-content/uploads/2019/01/ranking-300x237.jpg"),
+              fit:BoxFit.fill
+            )),
+          ),
+        ),
+        Positioned(
           top: 0,
           left: 0,
           right: 0,
           child: Container(
+            padding: EdgeInsets.only(left:24.0, right:24.0),
             height: screenHeight * 0.25,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(16.0),
-                    bottomRight: Radius.circular(16.0)),
+                    bottomRight: Radius.circular(16.0),
+                ),
+
                 gradient: LinearGradient(
                     colors: [_color, _color2],
                     begin: Alignment.centerLeft,
-                    end: Alignment.centerRight)),
+                    end: Alignment.centerRight)
+            ),
+              child:SafeArea(
+                  child:Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Spacer(),
+                          Text(
+                              "Lorem Ipsum",
+                              style: TextStyle(color:Colors.white, fontSize: 28.0, fontWeight: FontWeight.bold)
+                          ),
+                          Spacer(),
+                          // Icon(
+                          //   Icons.arrow_back_ios,
+                          //   size:36.0,
+                          //   color:Colors.white,
+                          // ),
+                          // OutlineButton(
+                          //   onPressed: () {
+                          //     Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          //       builder: (context) => homepage(),
+                          //     ));
+                          //   },
+                          // ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Spacer(),
+                          Text("Lorem Ipsum", style: TextStyle(color:Colors.white, fontSize: 20.0, fontWeight: FontWeight.w600),),
+                          SizedBox(width:16.0),
+                          Text("Last Score: 50", style: TextStyle(color:Colors.white, fontSize: 20.0, fontWeight: FontWeight.w600),),
+                        ],
+                      ),
+                      Text("Highest Score: 90", style: TextStyle(color:Colors.white, fontSize: 28.0, fontWeight: FontWeight.w600),),
+                    ],
+                  )
+              )
           ),
         ),
         Positioned(
@@ -56,18 +114,22 @@ class _LeaderboardState extends State<Leaderboard> {
                   size: 28.0,
                   color: Colors.white,
                 ),
-                Container(
-                  width:150.0,
-                    height: 28.0,
-                    decoration: ShapeDecoration(
-                        shape: StadiumBorder(), color: Colors.white),
-                    child: Center(
-                      child: Text("Play",
-                          style: TextStyle(
-                              color: _color,
-                              fontSize: 24.0,
-                              fontWeight: FontWeight.w600)),
+                OutlineButton(
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => homepage(),
+                    ));
+                  },
+                  child: Text(
+                    "Return Home Page",
+                    style: TextStyle(
+                      fontSize: 18.0,
                     ),
+                  ),
+                  color: Colors.white,
+                  padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                  borderSide: BorderSide(width: 3.0, color: Colors.indigo),
+                  splashColor: Colors.indigoAccent,
                 ),
                 Icon(
                   Icons.account_circle,
