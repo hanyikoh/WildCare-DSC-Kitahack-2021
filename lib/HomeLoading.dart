@@ -34,7 +34,6 @@ class _HomeLoadingState extends State<HomeLoading> {
                 )
             )
         ),
-        drawer: DrawerNav(),
     );
   }
 }
