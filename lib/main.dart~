@@ -1,5 +1,3 @@
-import 'package:quiz_app/home.dart';
-
 import 'HomeLoading.dart';
 import 'package:flutter/material.dart';
 import 'leaderboard.dart';
@@ -14,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home:homepage(),
+      home:Leaderboard(),
     );
   }
 }
