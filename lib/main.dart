@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'widget/menu.dart';
 import 'widget/drawer.dart';
 import 'package:wildlifecare/module/listpage.dart';
-import 'package:wildlifecare/module/quizpage.dart';
+import 'package:wildlifecare/module/quiz/quizlist.dart';
+import 'package:wildlifecare/module/leaderboard.dart';
+import 'package:wildlifecare/module/startingpage.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,16 +20,19 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.cyan[600],
       ),
       initialRoute: '/',
-      home: MyHomePage(title: 'WildCare'),
+      home: StartPage(),
       routes: {
+        '/home': (context) => MyHomePage(title: 'WildCare'),
         '/list': (context) => ListPage(),
-        '/quiz': (context) => QuizPage(),
+        '/quiz': (context) => QuizList(),
+        '/leaderboard': (context) => Leaderboard()
       },
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
+  static const String routeName = "/home";
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
 

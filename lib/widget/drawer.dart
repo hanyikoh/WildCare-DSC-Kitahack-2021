@@ -10,15 +10,25 @@ class DrawerNav extends StatelessWidget {
         _createDrawerItem(
           icon: Icons.list,
           text: 'List',
-          onTap: () => Navigator.pushNamed(context, Routes.list),
+          onTap: () => {
+            Navigator.pop(context),
+            Navigator.pushNamed(context, Routes.list)
+          },
         ),
         _createDrawerItem(
           icon: Icons.fact_check,
           text: 'Quiz',
           onTap: () => {
             Navigator.pop(context),
-            print(context),
             Navigator.pushNamed(context, Routes.quiz)
+          },
+        ),
+        _createDrawerItem(
+          icon: Icons.leaderboard,
+          text: 'Leaderboard',
+          onTap: () => {
+            Navigator.pop(context),
+            Navigator.pushNamed(context, Routes.leaderboard)
           },
         )
       ]),
