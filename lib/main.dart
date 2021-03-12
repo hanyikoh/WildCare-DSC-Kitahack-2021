@@ -1,3 +1,4 @@
+import 'package:engandered_animal_learning_app/HomeLoading.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home:,
+      home:HomeLoading(),
     );
   }
 }
