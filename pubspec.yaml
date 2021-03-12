@@ -39,3 +39,4 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/images/animal_classes/

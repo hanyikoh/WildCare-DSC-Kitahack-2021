@@ -12,11 +12,9 @@ class QuizList extends StatefulWidget {
 
 class _QuizListPage extends State<QuizList> {
   List<String> images = [
-    "assets/images/py.png",
-    "assets/images/java.png",
-    "assets/images/js.png",
-    "assets/images/cpp.png",
-    "assets/images/linux.png",
+    "assets/images/animal_classes/mammals.png",
+    "assets/images/animal_classes/birds.png",
+    "assets/images/animal_classes/amphibians.png",
   ];
 
   Widget customcard(String langname, String image) {
@@ -89,11 +87,9 @@ class _QuizListPage extends State<QuizList> {
       ),
       body: ListView(
         children: <Widget>[
-          customcard("Python", images[0]),
-          customcard("Java", images[1]),
-          customcard("javascript", images[2]),
-          customcard("C++", images[3]),
-          customcard("Linux", images[4]),
+          customcard("Mammals", images[0]),
+          customcard("Birds", images[1]),
+          customcard("Amphibians", images[2]),
         ],
       ),
       drawer: DrawerNav(),
