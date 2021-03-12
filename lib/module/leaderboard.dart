@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wildlifecare/widget/drawer.dart';
+import 'package:wildlifecare/model/User.dart';
 
 class Leaderboard extends StatefulWidget {
   static const String routeName = '/leaderboard';
@@ -9,157 +10,157 @@ class Leaderboard extends StatefulWidget {
 }
 
 class _LeaderboardState extends State<Leaderboard> {
-  // Color _color = Color.fromRGBO(255, 76, 119, 1);
-  // Color _color2 = Color.fromRGBO(255, 148, 78, 1);
-  Color _color = Colors.indigoAccent[400];
-  Color _color2 = Color.fromRGBO(60, 148, 150, 1);
+  Color my = Colors.brown, CheckMyColor = Colors.white;
+  var r = TextStyle(color: Colors.purpleAccent, fontSize: 34);
+  List users;
+
+  @override
+  void initState() {
+    users = getUsers();
+    super.initState();
+  }
+
+  List getUsers() {
+    return [
+      User(name: "Jagga", imagehref: "assets/images/avatar.png", points: 123),
+      User(name: "Interd", imagehref: "assets/images/avatar.png", points: 100),
+      User(name: "Meettt", imagehref: "assets/images/avatar.png", points: 100),
+      User(name: "Losss", imagehref: "assets/images/avatar.png", points: 99),
+      User(name: "Alif", imagehref: "assets/images/avatar.png", points: 88),
+    ];
+  }
+
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Leaderboard", style: TextStyle(fontFamily: "Quando")),
+      ),
       body: Stack(
         children: <Widget>[
-          Positioned(
-            top: screenHeight * 0.23,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            child: Container(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: NetworkImage(
-                          "https://padelcalatayud.com/Blog/wp-content/uploads/2019/01/ranking-300x237.jpg"),
-                      fit: BoxFit.fill)),
-            ),
-          ),
-          Positioned(
-            top: 0,
-            left: 0,
-            right: 0,
-            child: Container(
-                padding: EdgeInsets.only(left: 24.0, right: 24.0),
-                height: screenHeight * 0.25,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(16.0),
-                      bottomRight: Radius.circular(16.0),
-                    ),
-                    gradient: LinearGradient(
-                        colors: [_color, _color2],
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight)),
-                child: SafeArea(
-                    child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Spacer(),
-                        Text("Lorem Ipsum",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 28.0,
-                                fontWeight: FontWeight.bold)),
-                        Spacer(),
-                        // Icon(
-                        //   Icons.arrow_back_ios,
-                        //   size:36.0,
-                        //   color:Colors.white,
-                        // ),
-                        // OutlineButton(
-                        //   onPressed: () {
-                        //     Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        //       builder: (context) => homepage(),
-                        //     ));
-                        //   },
-                        // ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Spacer(),
-                        Text(
-                          "Lorem Ipsum",
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(left: 15.0, top: 30.0),
+                child: RichText(
+                  text: TextSpan(
+                    text: "Leader",
+                    style: TextStyle(
+                        color: Colors.deepPurple,
+                        fontSize: 30.0,
+                        fontWeight: FontWeight.bold),
+                    children: [
+                      TextSpan(
+                          text: " Board",
                           style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.w600),
-                        ),
-                        SizedBox(width: 16.0),
-                        Text(
-                          "Last Score: 50",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.w600),
-                        ),
-                      ],
-                    ),
-                    Text(
-                      "Highest Score: 90",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 28.0,
-                          fontWeight: FontWeight.w600),
-                    ),
-                  ],
-                ))),
-          ),
-          Positioned(
-            bottom: 0,
-            left: 0,
-            right: 0,
-            child: Container(
-              height: screenHeight * 0.10,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(0.0),
-                    bottomRight: Radius.circular(0.0)),
-                gradient: LinearGradient(
-                    colors: [_color, _color2],
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight),
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Icon(
-                    Icons.home,
-                    size: 28.0,
-                    color: Colors.white,
+                              color: Colors.pink,
+                              fontSize: 30.0,
+                              fontWeight: FontWeight.bold)),
+                    ],
                   ),
-                  OutlineButton(
-                    onPressed: () {
-                      Navigator.of(context).pushNamed("/home");
-                    },
-                    child: Text(
-                      "Return Home Page",
-                      style: TextStyle(
-                        fontSize: 18.0,
-                      ),
-                    ),
-                    color: Colors.white,
-                    padding:
-                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                    borderSide: BorderSide(width: 3.0, color: Colors.indigo),
-                    splashColor: Colors.indigoAccent,
-                  ),
-                  Icon(
-                    Icons.account_circle,
-                    size: 28.0,
-                    color: Colors.white,
-                  )
-                ],
+                ),
               ),
-            ),
+              Padding(
+                padding: EdgeInsets.only(top: 10, left: 15.0),
+                child: Text(
+                  'Global Rank Board: ',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+              // ListView.builder(
+              //     itemCount: this.users.length,
+              //     itemBuilder: (context, index) {
+              //       // return _createWinnerCard(users[index], index);
+              //     }),
+            ],
           ),
         ],
       ),
       drawer: DrawerNav(),
+    );
+  }
+
+  Widget _createWinnerCard(User user, int index) {
+    int i = 0;
+    if (index >= 1) {
+      print('Greater than 1');
+      if (user.points == users[index - 1].points) {
+        print('Same');
+      } else {
+        i++;
+      }
+    }
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
+      child: InkWell(
+        child: Container(
+          decoration: BoxDecoration(
+              border: Border.all(
+                  color: Colors.amber, width: 3.0, style: BorderStyle.solid),
+              borderRadius: BorderRadius.circular(5.0)),
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10.0, left: 15.0),
+                    child: Row(
+                      children: <Widget>[
+                        CircleAvatar(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/avatar.png"),
+                                  fit: BoxFit.fill),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0, top: 10.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            user.name,
+                            style: TextStyle(
+                              color: Colors.deepPurple,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            maxLines: 6,
+                          ),
+                        ),
+                        Text(user.points.toString()),
+                        i == 0
+                            ? Text("🥇", style: r)
+                            : i == 1
+                                ? Text(
+                                    "🥈",
+                                    style: r,
+                                  )
+                                : i == 2
+                                    ? Text(
+                                        "🥉",
+                                        style: r,
+                                      )
+                                    : Text(''),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

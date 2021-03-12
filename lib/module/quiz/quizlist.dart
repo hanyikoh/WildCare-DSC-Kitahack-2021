@@ -85,7 +85,7 @@ class _QuizListPage extends State<QuizList> {
         [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
     return Scaffold(
       appBar: AppBar(
-        title: Text("QuizApp", style: TextStyle(fontFamily: "Quando")),
+        title: Text("Quizzes", style: TextStyle(fontFamily: "Quando")),
       ),
       body: ListView(
         children: <Widget>[
