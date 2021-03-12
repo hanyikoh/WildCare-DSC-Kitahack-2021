@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
-
+import 'resultpage.dart';
 class getjson extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

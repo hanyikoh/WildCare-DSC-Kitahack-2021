@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:engandered_animal_learning_app/home.dart';
+import 'home.dart';
 
 class HomeLoading extends StatefulWidget {
   @override

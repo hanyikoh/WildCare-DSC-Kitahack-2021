@@ -1,4 +1,4 @@
-import 'package:engandered_animal_learning_app/HomeLoading.dart';
+import 'HomeLoading.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
