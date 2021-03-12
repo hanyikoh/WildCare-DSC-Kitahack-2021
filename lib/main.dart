@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:wildlifecare/module/quizpage.dart';
 import 'widget/menu.dart';
 import 'widget/drawer.dart';
 import 'package:wildlifecare/module/listpage.dart';
+import 'package:wildlifecare/module/quizpage.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -20,11 +18,11 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.cyan[600],
       ),
       initialRoute: '/',
+      home: MyHomePage(title: 'WildCare'),
       routes: {
         '/list': (context) => ListPage(),
         '/quiz': (context) => QuizPage(),
       },
-      home: MyHomePage(title: 'WildCare'),
     );
   }
 }

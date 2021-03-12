@@ -18,7 +18,7 @@ class DrawerNav extends StatelessWidget {
           onTap: () => {
             Navigator.pop(context),
             print(context),
-            Navigator.pushReplacementNamed(context, Routes.quiz)
+            Navigator.pushNamed(context, Routes.quiz)
           },
         )
       ]),

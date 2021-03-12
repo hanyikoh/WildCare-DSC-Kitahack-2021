@@ -19,7 +19,7 @@ class _MenuState extends State<Menu> {
             child: Card(
               child: InkWell(
                 onTap: () => {
-                  Navigator.pushReplacementNamed(context, Routes.list),
+                  Navigator.pushNamed(context, Routes.list),
                 },
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -37,7 +37,7 @@ class _MenuState extends State<Menu> {
             child: Card(
               child: InkWell(
                 onTap: () {
-                  Navigator.pushReplacementNamed(context, Routes.quiz);
+                  Navigator.pushNamed(context, Routes.quiz);
                 },
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
