@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'module/menu.dart';
-import 'module/drawer.dart';
+import 'package:wildlifecare/module/quizpage.dart';
+import 'widget/menu.dart';
+import 'widget/drawer.dart';
+import 'package:wildlifecare/module/listpage.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,13 +13,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Wildlife care',
+      title: 'WildCare',
       theme: ThemeData(
         brightness: Brightness.light,
         primaryColor: Colors.white,
         accentColor: Colors.cyan[600],
       ),
-      home: MyHomePage(title: 'Wildlife, we care'),
+      initialRoute: '/',
+      routes: {
+        '/list': (context) => ListPage(),
+        '/quiz': (context) => QuizPage(),
+      },
+      home: MyHomePage(title: 'WildCare'),
     );
   }
 }
