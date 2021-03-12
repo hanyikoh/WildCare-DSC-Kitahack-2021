@@ -1,12 +1,10 @@
-import 'package:quiz_app/HomeLoading.dart';
-
-import 'home.dart';
-
 import 'package:flutter/material.dart';
-import 'menu.dart';
-import 'drawer.dart';
-import 'quizpage.dart';
-import 'leaderboard.dart';
+import 'widget/menu.dart';
+import 'widget/drawer.dart';
+import 'package:wildlifecare/module/listpage.dart';
+import 'package:wildlifecare/module/quiz/quizlist.dart';
+import 'package:wildlifecare/module/leaderboard.dart';
+import 'package:wildlifecare/module/startingpage.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,17 +20,19 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.cyan[600],
       ),
       initialRoute: '/',
-      home: MyHomePage(title: 'WildCare'),
+      home: StartPage(),
       routes: {
-        '/list': (context) => homepage(),
-        '/quiz': (context) => getjson(),
-        '/leaderboard': (context) => Leaderboard(),
+        '/home': (context) => MyHomePage(title: 'WildCare'),
+        '/list': (context) => ListPage(),
+        '/quiz': (context) => QuizList(),
+        '/leaderboard': (context) => Leaderboard()
       },
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
+  static const String routeName = "/home";
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
 
@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: HomeLoading(),
+        child: Menu(),
       ),
       drawer: DrawerNav(),
     );

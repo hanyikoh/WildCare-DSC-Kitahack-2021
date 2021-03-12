@@ -1,0 +1,48 @@
+[
+    {
+        "1": "Which continent can the Kiwi Birds be found ?",
+        "2": "Due to the melting of polar ice caps, Snowy Owls are unable to find ... (natural prey) to feed on.",
+        "3": "The Tanna Fruit-Doves are a species of doves that resides in the Port Vila islands, they are open to ... (threats)",
+        "4": "Which of the following is an endangered species ?",
+        "5": "The California Condor has a wingspan of ?"
+    },
+    {
+        "1": {
+            "a": "Africa",
+            "b": "Oceania",
+            "c": "South America",
+            "d": "Australia"
+        },
+        "2": {
+            "a": "mice",
+            "b": "fish",
+            "c": "snakes",
+            "d": "moths"
+        },
+        "3": {
+            "a": "the rising of sea-level",
+            "b": "deforestration",
+            "c": "the rising of global temperature",
+            "d": "livestock farming and ranching"
+        },
+        "4": {
+            "a": "Visayan Hornbill",
+            "b": "Emperor Penguin",
+            "c": "Mute Swan",
+            "d": "Grey-hooded Parrotbill"
+        },
+        "5": {
+            "a": "2.5 m",
+            "b": "3 m",
+            "c": "3.5 m",
+            "d": "4 m"
+        }
+    },
+    {
+        "1": "Oceania",
+        "2": "mice",
+        "3": "deforestration",
+        "4": "Mute Swan",
+        "5": "3 m"
+    }
+]
