@@ -14,7 +14,7 @@ class DetailPage extends StatelessWidget {
           borderRadius: BorderRadius.circular(5.0)),
       child: Center(
         child: new Text(
-          wildlife.countries[0],
+          wildlife.pop,
           style: TextStyle(color: Colors.white),
         ),
       ),
@@ -56,7 +56,7 @@ class DetailPage extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.5,
             decoration: new BoxDecoration(
               image: new DecorationImage(
-                image: new AssetImage("assets/images/tiger.jpg"),
+                image: new AssetImage(wildlife.imagehref),
                 fit: BoxFit.cover,
               ),
             )),

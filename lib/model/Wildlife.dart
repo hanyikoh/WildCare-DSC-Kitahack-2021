@@ -5,7 +5,7 @@ class Wildlife {
   String status;
   List habitats;
   List countries;
-  List threats;
+  String pop;
 
   Wildlife(
       {this.name,
@@ -14,5 +14,5 @@ class Wildlife {
       this.status,
       this.habitats,
       this.countries,
-      this.threats});
+      this.pop});
 }
