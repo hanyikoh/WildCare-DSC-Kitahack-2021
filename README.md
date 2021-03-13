@@ -1,16 +1,10 @@
-# wildlifecare
+# WildCare
 
-A new Flutter project.
+WildCare is an application that helps user to recognize better about the endangered species both living on land and underwater. Through the simple games and dictionary, it should allow user to better understand the endangered species around them.
 
-## Getting Started
+## Execution
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Connect with your device / or emulator.
+```
+flutter run
+```
