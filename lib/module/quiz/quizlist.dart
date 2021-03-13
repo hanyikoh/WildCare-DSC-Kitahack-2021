@@ -60,7 +60,7 @@ class _QuizListPage extends State<QuizList> {
                 Container(
                   padding: EdgeInsets.all(20.0),
                   child: Text(
-                    "Lorem Ipsum \nwiewieggtt \nwwqeqwe \nwewqewih \nweuwqgoiqeigj",
+                    "Click here to challenge\n a quiz for this species",
                     style: TextStyle(
                         fontSize: 16.0,
                         color: Colors.white,

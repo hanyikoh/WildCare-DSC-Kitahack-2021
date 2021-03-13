@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.cyan[600],
       ),
       initialRoute: '/',
+      debugShowCheckedModeBanner: false,
       home: StartPage(),
       routes: {
         '/home': (context) => MyHomePage(title: 'WildCare'),
